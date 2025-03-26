@@ -1,3 +1,7 @@
-Third school project. Repeated calls to get_next_line() function should read the text file pointed to by the file descriptor, one line at a time (including the terminating '\n' character). Function returns the line that was read. If there is nothing else to read or if an error occurred, it should return NULL. Function should work as expected reading from a file or stdin.
-Bonus part handles multiple file descriptors at the same time. For example, if you can read from the file descriptors 3, 4 and 5, you should be
-able to read from a different fd per call without losing the reading thread of each file descriptor or returning a line from another fd.
+📜 get_next_line – One Line at a Time
+
+For my third project at Hive Helsinki, I built get_next_line(), a function that reads a file one line at a time, including the newline character. 📖 Whether reading from a file or stdin, repeated calls return the next line until there's nothing left to read (or an error occurs). In that case, it returns NULL.
+
+The bonus part took things up a notch by handling multiple file descriptors at once! 🔄 That means if you're reading from multiple files (e.g., fds 3, 4, and 5), the function keeps track of each one separately—without mixing up lines or losing progress.
+
+⚡ This project was a great deep dive into memory management and file handling in C. On to the next challenge!
